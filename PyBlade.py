@@ -1,10 +1,8 @@
 print('this ill be a part of code...')
---[[print('A')
+print('A')
 N2 = 'B'
-if N2 == 'B' then
+if N2 == 'B':
   print('B')
-else
+else:
   print('?')
-end
 print('C')
-]]
