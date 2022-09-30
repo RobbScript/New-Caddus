@@ -6,3 +6,4 @@ if N2 == 'B':
 else:
   print('?')
 print('C')
+print('D')
