@@ -9,3 +9,4 @@ Caddus-Neptune: Lançamento adiado para 2023.
 - Novo gerenciador de dados: (Star)
 - Nova sequência de lançamentos (Rebirth)
 - Salvamento incluído por gambiarra. lol
+- Auxílio em estudos escolares
