@@ -1,5 +1,5 @@
 #viva a Anarquia! (A)
-#RobbScript is a GOD.
+#RobbScript Creator
 import os
 import time
 from SreddSys import *
@@ -149,7 +149,7 @@ if(optioneA1Z == "3"):
 if(optioneA1Z == "4"):
     print(
         "Mecanismos Presentes: Mikhail, Neil, Sredd. (3)\n",
-        "Versão do Sistema: 0.1 (Alpha)\n",
+        "Versão do Sistema: 0.1.3 (Alpha)\n",
         "Geração Caddus: Rebirth\n",
         "Gerenciador de Dados: Supernova\n",
         "Desenvolvimento Geral: 4.5 Horas\n",
