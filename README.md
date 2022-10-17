@@ -1,5 +1,6 @@
 # Caddus-Neptune / Caddus X (KhiWare)
-CaddusX (KhiWare): Em fase de desenvolvimento [Alpha]  Caddus-Neptune: Lançamento adiado para 2023.
+CaddusX (KhiWare): Em fase de desenvolvimento [Alpha]     
+Caddus-Neptune: Lançamento adiado para 2023.
 
 ## /nova geração de Caddus criada para ser os Caddus mais úteis existentes.
 ### Caddus KhiWare
