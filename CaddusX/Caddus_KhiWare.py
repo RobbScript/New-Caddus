@@ -156,7 +156,7 @@ if(optioneA1Z == "4"):
     #INFOS
     print(
         "Mecanismos Presentes: Mikhail, Neil, Sredd. (3)\n",
-        "Versão do Sistema: 0.2.5 (Alpha)\n",
+        "Versão do Sistema: 0.2.7 (Alpha)\n",
         "Geração Caddus: Rebirth\n",
         "Gerenciador de Dados: Supernova\n",
         "Desenvolvimento Geral: 4.5 Horas\n",
