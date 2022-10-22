@@ -3,7 +3,7 @@
 import os
 import time
 from SreddSys import *
-print("Caddus KhiWare (Alpha)")
+print("Caddus KhiWare (Beta)")
 User = ("Usuário: ")
 Pswd =  ("Senha: ")
 while False:
