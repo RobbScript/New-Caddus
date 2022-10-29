@@ -1,9 +1,0 @@
-código: 11384
-Nome: Vinícius de Carvalho
-Idade: 13
-QI: médio
-Status: Tentando ser programador
-Status Escolar: excelente
-Amizades: pessoas inteligentes
-Conteúdo de Matérias: 5/5
-Nota Akeseb: 93

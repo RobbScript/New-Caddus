@@ -1,1 +1,0 @@
-Senha_De_Segurança = "R8642R"
