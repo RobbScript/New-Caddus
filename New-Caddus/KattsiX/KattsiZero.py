@@ -17,7 +17,7 @@ dict1 ={
 } 
 
 out_file = open("myfile.json", "r")
-print(json.dumps("dict1"))
+print(json.read("dict1"))
 # the json file where the output must be stored 
 out_file = open("myfile.json", "w") 
     

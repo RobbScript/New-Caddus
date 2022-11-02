@@ -1,28 +1,32 @@
 #RobbScript Creator
-import os
 import time
+import os
 from SreddSys import *
-from UserNew import *
-if (userregis == "OK"):
-    os.system("clear") or None
+import json
+if os.path.isfile('UserPass.json'):
+   os.system("clear")
+   print("CaddusX (KhiWare) | Versão 2.0.0")
+   NewUserJson = open('UserPass.json')
+   data = json.load(NewUserJson)
+   User = (data["user"])
+   Password = (data["senha"])
+   NewUserJson.close()
+   UserSys = input("Usuário: ")
+   PassUser = input("Senha: ")
+   if (UserSys == User and PassUser == Password):
+       os.system("clear") or None
+   else:
+      print("erro")
 else:
-    print("Criar uma conta\n")
-    os.system("clear") or None
-    usuarionew = input("Usuário: ")
-    senhanew = input("Senha: ")
-    USERNEWCs = open("UserNew.py", "w")
-    USERNEWCs.truncate()
-    USERNEWCs.write(f"userregis = 'OK'\nuserofc = ('{usuarionew}')\nsenhaofc = ('{senhanew}')")
-    os.system("clear") or None
-    print("saindo do sistema...")
-    time.sleep(2)
-    exit()
-print("Caddus KhiWare | Versão 1.0.0")
-usersys = input("usuário: ")
-senhasys = input("senha: ")
-if (usersys == userofc and senhasys == senhaofc):
-    os.system("clear") or None
-else:
+    print("CaddusX (KhiWare) | Versão 2.0.0")
+    print("criar usuário")
+    usuário = input("usuário: ")
+    senha = input("senha: ")
+    senhajson = {"senha": f"{senha}", "user": f"{usuário}"}
+    verifypass = json.dumps(senhajson)
+    print(verifypass)
+    UserNPass = open("UserPass.json", "w")
+    UserNPass.write(verifypass)
     exit()
 print("O que você deseja acessar?")
 print(
@@ -141,125 +145,111 @@ if(optioneA1Z == "4"):
         "Desenvolvimento Geral: 4.5 Horas\n",
         "Dev(s): RobbScript\n",
         "Lançamento oficial: 17/10/2022 7:00 Am\n",
-        "Baseado no Kattsi Versão 1.0.0"
+        "Baseado no Kattsi Versão 2.0.1"
     )
     exit()
 if (optioneA1Z == "5"):
-    #CADDUS BANK (BNK)
-    while True:
-        os.system("clear") or None
-        print("olá, bem vindo ao CaddusBNK!")
-        print("O gerenciador de Créditos Caddus.")
-        print("O que você deseja?\n1-Fazer uma transação Administrador\n2-Fazer uma transação comum\n3-Ver Saldos")
-        opt1SBNK = input("opção: ")
-        if (opt1SBNK == "1"):
-            os.system("clear") or None
-            print("Escreva o ID do usuário Sredd")
-            optSIDBNK1 = input("ID: ")
-            os.system("clear") or None
-            USERBANK = open("Cad_BNK/{}.txt".format(optSIDBNK1), "r")
-            USREADABLE = USERBANK.read
-            method = USREADABLE()
-            print(method)
-            valor = int(input("digite o saldo da conta: "))
-            USERBANK.close
-            os.system("clear") or None
-            tipoSTBNK = input("Opções:\n+ > Adição\n- > Subtração\n\nOpção: ")
-            if (tipoSTBNK == "+"):
-                USERBANK = open(f"Cad_BNK/{optSIDBNK1}.txt", "w")
-                valorMS = int(input("valor a adicionar: "))
-                valorfinal = valor + valorMS
-                USERBANK.truncate(10)
-                str(valorfinal)
-                USERBANK.write(f"{valorfinal}")
-                exit()
-            if (tipoSTBNK == "-"):
-                USERBANK = open(f"Cad_BNK/{optSIDBNK1}.txt", "w")
-                valorMS = int(input("valor a adicionar: "))
-                valorfinal = valor - valorMS
-                USERBANK.truncate(10)
-                str(valorfinal)
-                USERBANK.write(f"{valorfinal}")
-                exit()
-            else:
-                print("Opção errada...")
-                time.sleep(1)
+        print("Olá, bem vindo ao Caddus Bank!")
+        if (os.path.isfile("Cad_BNK/usersbank.json")):
+            userbankusr = input("Conta: ")
+            userbankpass = input("Senha: ")
+            procuserjbnk = open("Cad_BNK/usersbank.json")
+            userbankjson = json.load(procuserjbnk)
+            usercorrectbnk = (userbankjson[f"{userbankusr}"])
+            userattempbnk = (usercorrectbnk["user"])
+            userattempbnk2 = (usercorrectbnk["pass"])
+            if(userattempbnk == userbankusr and  userattempbnk2 == userbankpass):
                 os.system("clear") or None
-                continue
-        if (opt1SBNK == "2"):
-            print("De qual conta?")
-            os.system("clear") or None
-            print("Digite o ID Sreed do Usuário transferidor")
-            cn1tc = input("ID: ")
-            USERBANK = open(f"Cad_BNK/{cn1tc}.txt", "r")
-            USREADABLE = USERBANK.read
-            method = USREADABLE()
-            os.system("clear") or None
-            print(method)
-            print("Digite o valor da conta: ")
-            vl1Cm = int(input("Valor:"))
-            os.system("clear") or None
-            print("Digite o ID Sreed do Usuário a receber")
-            cn2tc = input("segundo ID: ")
-            USERBANK.close
-            USERBANK2 = open(f"Cad_BNK/{cn2tc}.txt", "r")
-            USREADABLE = USERBANK2.read
-            method = USREADABLE()
-            print(method)
-            print("Digite o valor da segunda conta: ")
-            vl2Cm = int(input("Valor:"))
-            os.system("clear") or None
-            tipoSTBNK = input("Opções:\n+ > Adição\n- > Subtração")
-            if (tipoSTBNK == "+"):
-                #primeira conta
-                USERBANK = open(f"Cad_BNK/{cn1tc}.txt", "w")
-                print("valor a adicionar na segunda conta: ")
-                valorMS = int(input("valor: "))
-                USERBANK.truncate(10)
-                valorfinal1 = vl1Cm - valorMS
-                str(valorfinal1)
-                USERBANK.write(valorfinal1)
-                #segunda conta
-                USERBANK = open(f"Cad_BNK/{cn2tc}.txt", "w")
-                USERBANK.truncate(10)
-                valorfinal2 = vl2Cm + valorMS
-                str(valorfinal2)
-                USERBANK.write(valorfinal2)
-                exit()
-            if (tipoSTBNK == "-"):
-                USERBANK = open(f"Cad_BNK/{cn1tc}.txt", "w")
-                print("valor a receber da segunda conta: ")
-                valorMS = int(input("valor: "))
-                USERBANK.truncate(10)
-                valorfinal1 = vl1Cm + valorMS
-                str(valorfinal1)
-                USERBANK.write(valorfinal1)
-                #segunda conta
-                USERBANK = open(f"Cad_BNK/{cn2tc}.txt", "w")
-                USERBANK.truncate(10)
-                valorfinal2 = vl2Cm - valorMS
-                str(valorfinal2)
-                USERBANK.write(valorfinal2)
-                exit()
             else:
-                print("Opção errada...")
-                time.sleep(1)
-                os.system("clear") or None
-                continue
-        if (opt1SBNK == "3"):
-            print("digite o ID Sredd da conta que você quer olhar o saldo")
-            eIDsc = input("ID: ")
-            USEREYE = open(f"Cad_BNK/{eIDsc}.txt", "r")
-            USREADABLE = USEREYE.read
-            method = USREADABLE()
-            os.system("clear") or None
-            print("valor:")
-            print(method)
-            nothing = input("Digite Enter para continuar...")
+                exit()
+            print("Opções:\n1-Transferir Crédito\n2-Receber Crédito")
+            respmenubnkone = input("Opção: ")
+            if(respmenubnkone == "1"):
+                print("de qual conta?")
+                contabnktr1 = input("Seu ID Sredd: ")
+                contabnktr2 = input("ID Sredd (pessoa que irá receber): ")
+                if (os.path.isfile(f"Cad_BNK/{contabnktr1}.json" and os.path.isfile(f"Cad_BNK/{contabnktr2}.json"))):
+                    bankscanvalue = open(f"Cad_BNK/{contabnktr1}.json")
+                    bankscanvalue2 = open(f"Cad_BNK/{contabnktr2}.json")
+                    bankscanmotion = json.load(bankscanvalue)
+                    bankscanmotion2 = json.load(bankscanvalue2)
+                    rescanbnk = bankscanmotion["valor"]
+                    rescanbnk2 = bankscanmotion2["valor"]
+                    irescanbnk = int(rescanbnk)
+                    irescanbnk2 = int(rescanbnk)
+                    print("qual valor deseja transferir?")
+                    valorrgsbnk = int(input("valor: "))
+                    valorrgsp = (irescanbnk + valorrgsbnk)
+                    jsonbnktr = {"valor": f"{valorrgsp}"}
+                    jsonbnktrue = json.dumps(jsonbnktr)
+                    banktransf1 = open(f"Cad_BNK/{contabnktr1}.json", "w")
+                    banktransf1.truncate()
+                    banktransf1.write(jsonbnktrue)
+                    valorrgsp2 = (irescanbnk - valorrgsbnk)
+                    jsonbnktr2 = {"valor": f"{valorrgsp}"}
+                    banktransf2 = open(f"Cad_BNK/{contabnktr2}.json", "w")
+                    banktransf2.truncate()
+                    banktransf2.write(jsonbnktrue)
+                else:
+                    banktransf1 = open(f"Cad_BNK/{contabnktr1}.json", "w")
+                    banktransf2 = open(f"Cad_BNK/{contabnktr2}.json", "w")
+                    valorc = {"valor": "0"}
+                    rvalorc = json.dumps(valorc)
+                    banktransf1.write(rvalorc)
+                    banktransf2.write(rvalorc)
+                    exit()
+                try:
+                    bankscanmotion["valor"]
+                except:
+                    print("registro quebrado :/")
+            elif(respmenubnkone == "2"):
+                print("de qual conta?")
+                contabnktr1 = input("ID Sredd (transferidor): ")
+                contabnktr2 = input("Seu ID Sredd: ")
+                if (os.path.isfile(f"Cad_BNK/{contabnktr1}.json" and os.path.isfile(f"Cad_BNK/{contabnktr2}.json"))):
+                    bankscanvalue = open(f"Cad_BNK/{contabnktr1}.json")
+                    bankscanvalue2 = open(f"Cad_BNK/{contabnktr2}.json")
+                    bankscanmotion = json.load(bankscanvalue)
+                    bankscanmotion2 = json.load(bankscanvalue2)
+                    rescanbnk = bankscanmotion["valor"]
+                    rescanbnk2 = bankscanmotion2["valor"]
+                    irescanbnk = int(rescanbnk)
+                    irescanbnk2 = int(rescanbnk)
+                    print("qual valor deseja resgatar?")
+                    valorrgsbnk = int(input("valor: "))
+                    valorrgsp = (irescanbnk - valorrgsbnk)
+                    jsonbnktr = {"valor": f"{valorrgsp}"}
+                    jsonbnktrue = json.dumps(jsonbnktr)
+                    banktransf1 = open(f"Cad_BNK/{contabnktr1}.json", "w")
+                    banktransf1.truncate()
+                    banktransf1.write(jsonbnktrue)
+                    valorrgsp2 = (irescanbnk + valorrgsbnk)
+                    jsonbnktr2 = {"valor": f"{valorrgsp}"}
+                    banktransf2 = open(f"Cad_BNK/{contabnktr2}.json", "w")
+                    banktransf2.truncate()
+                    banktransf2.write(jsonbnktrue)
+                else:
+                    banktransf1 = open(f"Cad_BNK/{contabnktr1}.json", "w")
+                    banktransf2 = open(f"Cad_BNK/{contabnktr2}.json", "w")
+                    valorc = {"valor": "0"}
+                    rvalorc = json.dumps(valorc)
+                    banktransf1.write(rvalorc)
+                    banktransf2.write(rvalorc)
+                    exit()
+                try:
+                    bankscanmotion["valor"]
+                except:
+                    print("registro quebrado :/")
+            exit()
         else:
-            print("opção errada")
-            time.sleep(1)
-            continue
+            print("criar conta")
+            userbankidcreate = input("ID: ")
+            userbankusrcreate = input("Conta: ")
+            userbankpasscreate = input("Senha: ")
+            regisusert = open("usersbank.json", "w")
+            nubj = {f"{userbankusrcreate}": {"ID": f"{userbankidcreate}", "user": f"{userbankusrcreate}", "pass": f"{userbankpasscreate}"}}
+            jsonnubj = json.dumps(nubj)
+            regisusert.write(jsonnubj)
 if (optioneA1Z == "6"):
 #CESAR SYSTEM
        print("olá, bem vindo ao Joseph")
