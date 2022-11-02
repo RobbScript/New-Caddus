@@ -4,7 +4,7 @@ import os
 import json
 if os.path.isfile('UserPass.json'):
    os.system("clear")
-   print("CaddusX (KhiWare) | Versão 2.0.0")
+   print("CaddusX (KhiWare) | Versão 2.0.1")
    NewUserJson = open('UserPass.json')
    data = json.load(NewUserJson)
    User = (data["user"])
