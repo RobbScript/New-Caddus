@@ -2,9 +2,10 @@
 import time
 import os
 import json
+BVV = print("CaddusX (KhiWare) | Versão 2.0.1")
 if os.path.isfile('UserPass.json'):
    os.system("clear")
-   print("CaddusX (KhiWare) | Versão 2.0.1")
+   print(BVV)
    NewUserJson = open('UserPass.json')
    data = json.load(NewUserJson)
    User = (data["user"])
@@ -17,7 +18,7 @@ if os.path.isfile('UserPass.json'):
    else:
       print("erro")
 else:
-    print("CaddusX (KhiWare) | Versão 2.0.0")
+    print(BVV)
     print("criar usuário")
     usuário = input("usuário: ")
     senha = input("senha: ")
