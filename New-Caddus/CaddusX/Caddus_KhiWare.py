@@ -139,13 +139,13 @@ if(optioneA1Z == "4"):
     #INFOS
     print(
         "Mecanismos Presentes: Mikhail, Neil, Sredd, Cesar. (4)\n",
-        "Versão do Sistema: 1.0.0\n",
+        "Versão do Sistema: 2.0.1\n",
         "Geração Caddus: Rebirth\n",
-        "Gerenciador de Dados: Supernova\n",
+        "Gerenciador de Dados: Star Sirius\n",
         "Desenvolvimento Geral: 4.5 Horas\n",
         "Dev(s): RobbScript\n",
         "Lançamento oficial: 17/10/2022 7:00 Am\n",
-        "Baseado no Kattsi Versão 2.0.1"
+        "Baseado no Kattsi Versão 1.0.0"
     )
     exit()
 if (optioneA1Z == "5"):
