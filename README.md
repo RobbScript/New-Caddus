@@ -6,7 +6,7 @@ Caddus-Neptune: Lançamento adiado para 2023.
 ### Caddus KhiWare
 - Tem várias utilidades
 - Porta projetos menores
-- Novo gerenciador de dados: (Star)
+- Novo gerenciador de dados: (Star Sirius)
 - Nova sequência de lançamentos (Rebirth)
-- Salvamento incluído por gambiarra. lol
+- Salvamento 100% funcional | JSON
 - Auxílio em estudos escolares
