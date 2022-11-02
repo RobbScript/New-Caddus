@@ -1,7 +1,6 @@
 #RobbScript Creator
 import time
 import os
-from SreddSys import *
 import json
 if os.path.isfile('UserPass.json'):
    os.system("clear")
