@@ -6,6 +6,7 @@ bvv = ("CaddusX (KhiWare) | Versão 2.0.1")
 if os.path.isfile('UserPass.json'):
    os.system("clear")
    print(bvv)
+   print("updated")
    NewUserJson = open('UserPass.json')
    data = json.load(NewUserJson)
    User = (data["user"])
