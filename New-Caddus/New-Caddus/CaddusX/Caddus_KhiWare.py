@@ -43,72 +43,16 @@ print(
 optioneA1Z = input("Opção: ")
 if(optioneA1Z == "1"):
     #MIKHAIL SYSTEM
-    os.system("clear")
-    print("olá, bem vindo ao MikHail")
-    print("sistema de salvar textos de cadernos/conteúdo de cadernos\n")
-    print("O que você deseja?\n1-Escrever\n2-Ler")
-    optone = input("opção: ")
-    os.system("clear")
-    if (optone == "1"):
-        print("Qual matéria?")
-        print("1-Portugês\n2-Matemática\n3-Ciências\n4-Geografia\n5-História\n6-Educação Física\n7-Inglês\n8-Projeto de vida\n9-Eletivas")
-        mat1 = input ("digite o número: ")
-        Escarc = open(f"materiasmik/{mat1}.txt", "w")
-        os.system("clear")
-        print("escrevendo...")
-        materia = input("matéria: ")
-        data = input("data: ")
-        conteúdo = input("conteúdo: ")
-        Escarc.write(f"\nMatéria: {materia} | Data: {data}\nConteúdo: {conteúdo}\n")
-        nothing1 = input("pressione Enter para sair...")
-        exit()
-    if (optone == "2"):
-        print("Qual matéria?")
-        print("1-Portugês\n2-Matemática\n3-Ciências\n4-Geografia\n5-História\n6-Educação Física\n7-Inglês\n8-Projeto de vida\n9-Eletivas")
-        mat1 = input ("digite o número: ")
-        Escarc = open(f"materiasmik/{mat1}.txt", "r")
-        os.system("clear")
-        print(Escarc.read())
-        nothing2 = input("pressione Enter para sair...")
-        exit()
-    else:
-        exit()
+    rubymik = 'ruby Mikhail.rb'
+    os.system(rubymik)
 if(optioneA1Z == "2"):
     #SREDD SYSTEM
     rubysredd = 'ruby Sredd.rb'
     os.system(rubysredd)
 if(optioneA1Z == "3"):
     #NEIL SYSTEM
-    os.system("clear")
-    print("olá, bem vindo ao Neil")
-    print("sistema de salvar RESUMOS de\nconteúdo de aulas/matérias\n")
-    print("O que você deseja?\n1-Escrever\n2-Ler")
-    optone = input("opção: ")
-    os.system("clear")
-    if (optone == "1"):
-        print("Qual matéria?")
-        print("1-Portugês\n2-Matemática\n3-Ciências\n4-Geografia\n5-História\n6-Educação Física\n7-Inglês\n8-Projeto de vida\n9-Eletivas")
-        mat1 = input ("digite o número: ")
-        Escarc = open(f"materiasneil/{mat1}.txt", "w")
-        os.system("clear")
-        print("escrevendo...")
-        materia = input("matéria: ")
-        data = input("data: ")
-        resumo = input("resumo: ")
-        Escarc.write(f"\nMatéria: {materia} | Data: {data}\nConteúdo: {resumo}\n")
-        nothing1 = input("pressione Enter para sair...")
-        exit()
-    if (optone == "2"):
-        print("Qual matéria?")
-        print("1-Portugês\n2-Matemática\n3-Ciências\n4-Geografia\n5-História\n6-Educação Física\n7-Inglês\n8-Projeto de vida\n9-Eletivas")
-        mat1 = input ("digite o número: ")
-        Escarc = open(f"materiasneil/{mat1}.txt", "r")
-        os.system("clear")
-        print(Escarc.read())
-        nothing2 = input("pressione Enter para sair...")
-        exit()
-    else:
-        exit()
+    rubyneil = 'ruby Neil.rb'
+    os.system(rubyneil)
 if(optioneA1Z == "4"):
     #INFOS
     print(
