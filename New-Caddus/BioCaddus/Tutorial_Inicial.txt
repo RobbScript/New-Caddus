@@ -1,0 +1,5 @@
+Para selecionar as mesas abra a imagem "Tutorial.png"
+no diretório Utilities do projeto e você saberá.
+
+Caso não abrir, saiba as mesas não de 1 a 7 na vertical e A a F na horizontal
+Exemplo: "B3" é a mesa 10 
